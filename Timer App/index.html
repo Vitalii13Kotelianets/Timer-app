@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Foldit&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <title>Timer</title>
+  </head>
+  <body>
+    <div class="current-date-time">
+      <div id="currentTime" class="date-and-location">Current Time</div>
+      <div id="currentLocation" class="date-and-location">
+      
+      </div>
+    </div>
+    <header>
+      <div class="container">
+        <div>Timer</div>
+      </div>
+    </header>
+    <section class="timer">
+      <div class="clock" id="time"></div>
+    </section>
+    <div class="buttons">
+      <button id="start" class="button start">Start</button>
+      <button id="pause" class="button pause">Pause</button>
+      <button id="resume" class="button resume">Resume</button>
+      <button id="reset" class="button reset">Reset</button>
+      <button id="lap" class="button lap">Lap</button>
+    </div>
+    <div class="laps-container">
+      <ul class="lapsList" id="laps"></ul>
+    </div>
+  </body>
+</html>

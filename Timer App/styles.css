@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.432);
+}
+.container {
+  width: 50%;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-family: 'Foldit', cursive;
+  letter-spacing: 10px;
+  font-size: 50px;
+  padding: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.timer {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.clock {
+  font-size: 50px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.button {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Bruno Ace SC', cursive;
+}
+.button:hover {
+  transform: translateY(-5px);
+}
+
+.button:not(:last-child) {
+  margin-right: 15px;
+}
+
+.start:hover {
+  background-color: rgba(172, 255, 47, 0.446);
+  color: #fff;
+  border: 2px solid transparent;
+}
+.pause:hover {
+  background-color: rgba(229, 232, 35, 0.901);
+  color: #fff;
+  border: 2px solid transparent;
+}
+.resume:hover {
+  background-color: rgba(0, 8, 255, 0.446);
+  color: #fff;
+  border: 2px solid transparent;
+}
+.reset:hover {
+  background-color: rgba(255, 0, 0, 0.717);
+  color: #fff;
+  border: 2px solid transparent;
+}
+.lap:hover {
+  background-color: rgba(239, 227, 116, 0.446);
+  color: #fff;
+  border: 2px solid transparent;
+}
+
+.laps-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.lapsList {
+  list-style-type: none;
+  font-size: 30px;
+  font-family: 'Bruno Ace SC', cursive;
+  margin-bottom: 10px;
+}
+
+.lapElement {
+  margin-bottom: 10px;
+}
+
+.current-date-time {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.date-and-location {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: 'Foldit', cursive;
+}
+
+.location-img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
