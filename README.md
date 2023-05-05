@@ -1,4 +1,4 @@
-##Timer App
+Timer App
 
 This is a simple timer app that allows you to track time intervals and perform several actions with the timer. You can start, pause, resume, reset, and record laps. The app also shows the current date and your location.
 
