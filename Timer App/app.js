@@ -1,3 +1,4 @@
+// Get the necessary DOM elements by their IDs
 const time = document.getElementById('time');
 const startBtn = document.getElementById('start');
 const pauseBtn = document.getElementById('pause');
@@ -8,10 +9,12 @@ const lapsTime = document.getElementById('laps');
 const currentTimeArea = document.getElementById('currentTime');
 const locationArea = document.getElementById('currentLocation');
 
+// Update the current location display by calling the showPosition function
 const currentLocation = () => {
   locationArea.textContent = showPosition();
 };
 
+// Update the current date display by getting the current date and formatting it
 const currentDate = () => {
   const monthNames = [
     'January',
@@ -35,15 +38,17 @@ const currentDate = () => {
   currentTimeArea.textContent = `Date : ${day} - ${monthNames[month]} - ${year}`;
 };
 
+// Call the currentDate function to set the initial date display
 currentDate();
 
+// Initialize the timer variables and set the timer display to 00:00:00
 let seconds = 0;
 let minutes = 0;
 let hours = 0;
 let intervalId;
-
 time.textContent = '00 : 00 : 00';
 
+// Define a function to start the timer by incrementing the seconds, minutes, and hours values and updating the display
 const startTimer = () => {
   intervalId = setInterval(() => {
     seconds++;
@@ -56,12 +61,14 @@ const startTimer = () => {
       minutes = 0;
       hours++;
     }
+    // Update the timer display with the current time values
     time.textContent = `${hours.toString().padStart(2, 0)} : ${minutes
       .toString()
       .padStart(2, 0)} : ${seconds.toString().padStart(2, 0)}`;
   }, 1000);
 };
 
+// Define functions to pause, resume, and reset the timer, as well as to add lap times
 const pauseTimer = () => {
   clearInterval(intervalId);
 };
@@ -76,6 +83,7 @@ const resetTimer = () => {
   minutes = 0;
   hours = 0;
   time.textContent = '00 : 00 : 00';
+  // Clear the lap times list and reset the lap counter
   lapsTime.innerHTML = '';
   lapCounter = 1;
   intervalId;
@@ -91,6 +99,7 @@ const lapTime = () => {
   lapCounter++;
 };
 
+// Add event listeners to the buttons to trigger the corresponding functions
 startBtn.addEventListener('click', () => {
   startTimer();
 });
@@ -111,6 +120,7 @@ lapBtn.addEventListener('click', () => {
   lapTime();
 });
 
+// Define a function to get the current position and update the location display using the OpenStreetMap API
 function showPosition() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
